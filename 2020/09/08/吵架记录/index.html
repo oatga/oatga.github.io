@@ -305,6 +305,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = 'oat-ga';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('这篇文章需要密码哟~')).toString(CryptoJS.enc.Hex)) {
+                alert('密码不正确！不许偷看~');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
